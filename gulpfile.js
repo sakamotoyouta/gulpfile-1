@@ -27,9 +27,6 @@ gulp.task( 'sass' , function(){
 	gulp.src( rootPaths.sassRoot )
 		.pipe(plumber())
 		.pipe(sass({outputStyle: 'expanded'}))
-		.pipe($.autoprefixer({
-	      browsers: ['last 2 versions']
-	    }))
 		.pipe(gulp.dest('./css/'))
 		.pipe(bs.reload({
 	      stream: true,
